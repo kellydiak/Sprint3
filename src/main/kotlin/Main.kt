@@ -3,10 +3,12 @@ package org.example
 import org.example.dresseur.Entraineur
 import org.example.item.Badge
 import org.example.item.MonsterKube
+import org.example.jdbc.BDD
 import org.example.jeu.Partie
 import org.example.monde.Zone
 import org.example.monstre.EspeceMonstre
 import org.example.monstre.IndividuMonstre
+
 
 /**
  * Change la couleur du message donné selon le nom de la couleur spécifié.
@@ -18,7 +20,7 @@ import org.example.monstre.IndividuMonstre
  * @return Le message coloré sous forme de chaîne, ou le même message si aucune couleur n'est appliquée.
  */
 
-/*fun changeCouleur(message: String, couleur: String=""): String {
+fun changeCouleur(message: String, couleur: String=""): String {
     val reset = "\u001B[0m"
     val codeCouleur = when (couleur.lowercase()) {
         "rouge" -> "\u001B[31m"
@@ -32,7 +34,10 @@ import org.example.monstre.IndividuMonstre
         else -> "" //pas de couleur sir non reconnu
     }
     return "$codeCouleur$message$reset"
-}*/
+}
+
+// Connexion à la base de données
+val db = BDD()
 
 //Objets Entraineur
 
@@ -100,6 +105,7 @@ fun main() {
     // démarrage du jeu
     val partie = nouvellePartie()
     partie.choixStarter()
+    db.close() //fermeture de la base de données
     partie.jouer()
 
 
