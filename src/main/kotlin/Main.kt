@@ -1,5 +1,7 @@
 package org.example
 
+import org.example.DAO.EntraineurDAO
+//import org.example.EspeceMonstreDAO
 import org.example.dresseur.Entraineur
 import org.example.item.Badge
 import org.example.item.MonsterKube
@@ -39,8 +41,13 @@ fun changeCouleur(message: String, couleur: String=""): String {
 // Connexion à la base de données
 val db = BDD()
 
-//Objets Entraineur
+//LES DAO
+val entraineurDAO= EntraineurDAO(db)
+val listeEntraineur = entraineurDAO.findAll()
+//val EspeceMonstreDAO = EspeceMonstreDAO(db)
+//val listeEspeceMonstre = EspeceMonstreDAO.findAll()
 
+//Objets Entraineur
 var joueur = Entraineur(1,"Sacha",100)
 var rival = Entraineur(2,"Regis",200)
 
@@ -79,6 +86,8 @@ fun nouvellePartie(): Partie {
     joueur.nom = tonNom // On stocke le nom du joueur dans joueur.nom
     println("Merci, nous allons créer votre partie veuillez patienter ${joueur.nom} ..")
     var partie1 : Partie = Partie(1, joueur, zone1)
+    joueur.id=0
+    entraineurDAO.save(joueur) // ajout du joueur dans la BDD
     return partie1
 }
 
