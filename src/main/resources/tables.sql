@@ -72,9 +72,8 @@ CREATE TABLE Zone_EspeceMonstre ( id_Zone INTEGER,
 
 # CREATION DES ENTRAINEURS
 INSERT INTO Entraineur (nom, argents) VALUES ('Bob',1500), ('Alice',1500), ('Clara',1500);
-#CREATION DES ESPECES MONSTRES
 
-# CREATION DES ESPECES DE MONSTRES
+#CREATION DES ESPECES MONSTRES
 INSERT INTO EspeceMonstre
 (id, nom, type, baseAttaque, baseDefense, baseVitesse, baseAttaqueSpe, baseDefenseSpe, basePv,
  modAttaque, modDefense, modVitesse, modAttaqueSpe, modDefenseSpe, modPv,
@@ -117,22 +116,11 @@ VALUES
      'Sérieux, stoïque, fiable.');
 
 # CREATION DES INDIVIDUS MONSTRES
-
 INSERT INTO IndividuMonstre (nom, niveau, attaque, defense, vitesse, attaqueSpe, defenseSpe, pvMax, potentiel,
-                             exp, pv, espece_id, entraineur_equipe_id, entraineur_boite_id) VALUES
-('Springleaf',)
+                            exp, pv, espece_id, entraineur_equipe_id, entraineur_boite_id) VALUES
 
-('')
-
-
-/*CREATE TABLE Entraineur (
-                            id INTEGER PRIMARY KEY AUTO_INCREMENT,
-                            nom VARCHAR(255),
-                            argents INTEGER
-);
-
-CREATE TABLE Entraineur (
-                            id INTEGER PRIMARY KEY AUTO_INCREMENT,
-                            nom VARCHAR(255),
-                            argents INTEGER
-);*/
+('springleaf',5,8,37,50,36,4,3000,5.0,4.0,7,1,2,2),
+('Aquamy',4,3,63,10,14,65,4000,7.1,4.30,10,7,1,1),
+('Bugsyface',1,15,27,20,22,36,1500,6.0,4.2,15,10,1,1),
+('Galum',7,16,14,22,11,17,4100,5.0,18.1,12.1,13,3,3),
+('Flamkip',9,11,23,29,17,10,7200,7.8,18.9,15.1,4,3,3);
