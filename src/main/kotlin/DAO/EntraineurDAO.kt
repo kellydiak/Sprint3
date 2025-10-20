@@ -9,7 +9,7 @@ import java.sql.Statement
 
 
 /**
- * DAO (Data Access Object) permettant d'interagir avec la table `Entraineurs`.
+ * DAO (Data Access Object) permettant d'interagir avec la table `Entraineur`.
  *
  * Cette classe gère les opérations CRUD :
  * - 🔍 Lecture (findAll, findById, findByNom)

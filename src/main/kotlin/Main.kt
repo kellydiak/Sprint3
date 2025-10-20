@@ -1,6 +1,8 @@
 package org.example
 
 import org.example.DAO.EntraineurDAO
+import org.example.DAO.EspeceMonstreDAO
+import org.example.DAO.IndividuMonstreDAO
 //import org.example.EspeceMonstreDAO
 import org.example.dresseur.Entraineur
 import org.example.item.Badge
@@ -32,6 +34,7 @@ fun changeCouleur(message: String, couleur: String=""): String {
         "magenta" -> "\u001B[35m"
         "cyan" -> "\u001B[36m"
         "blanc" -> "\u001B[37m"
+        "mauve" -> "\u001B[95m"
         "marron" -> "\u001B[38;5;137m"
         else -> "" //pas de couleur sir non reconnu
     }
@@ -43,9 +46,13 @@ val db = BDD()
 
 //LES DAO
 val entraineurDAO= EntraineurDAO(db)
+val especeMonstreDAO = EspeceMonstreDAO(db)
+val individuMonstreDAO = IndividuMonstreDAO(db)
+
+// Les listes
 val listeEntraineur = entraineurDAO.findAll()
-//val EspeceMonstreDAO = EspeceMonstreDAO(db)
-//val listeEspeceMonstre = EspeceMonstreDAO.findAll()
+val listeEspeceMonstre = especeMonstreDAO.findAll()
+val listeIndividuMonstre = individuMonstreDAO.findAll()
 
 //Objets Entraineur
 var joueur = Entraineur(1,"Sacha",100)
@@ -59,6 +66,9 @@ var especeAquamy = EspeceMonstre(7,"Aquamy","Meteo",10,11,9,14,14,55,9.0,10.0,7.
 var especeLaoumi = EspeceMonstre(8,"Laoumi","Animal",11,10,9,8,11,58,11.0,8.0,7.0,6.0,11.5,58.0,"Petit ourson au pelage soyeux, aime se tenir debout.","Son grognement est mignon mais il protège ses amis.","Affectueux, protecteur, gourmand")
 var especeBugsyface = EspeceMonstre(10,"Bugsyface","Insecte",10,13,8,7,13,45,7.0,11.0,6.5,8.0,11.5,45.0,"Insecte à carapace luisante, se déplace par bonds et vibre des antennes.","Sa carapace devient plus dure après chaque mue.","Travailleur, sociable, infatigable")
 var especeGalum = EspeceMonstre(13,"Galum","Minéral",12,15,6,8,12,55,9.0,13.0,4.0,6.5,10.5,55.0,"Golem ancien de pierre, yeux lumineux en garde.","Peut rester immobile des heures comme une statue.","Sérieux, stoïque, fiable")
+
+// Espece Monstre edition special
+var especeIceeFreezy = EspeceMonstre(14,"IceeFreezy","Animal",10,13,16,14,19,77,13.01,4.5,10.2,100.0,100.0,1.3,"Petit chat qui vient de la planète LuvOnFayar.","Lorsque on l'attaque il gèle et envoie de la neige à l'adversaire","Mignon, dalleux, pleurnichard")
 
 //Objets Zone
 
@@ -97,13 +107,6 @@ fun main() {
     val monstre1 = IndividuMonstre(1,"Springleaf", especeSpringleaf,null,1500.0)
     val monstre2 = IndividuMonstre(2,"Flampkip", especeFlamkip,null,1500.0)
     val monstre3 = IndividuMonstre(3,"Aquamy", especeAquamy,null,1500.0)
-    //monstre1.attaquer(IndividuMonstre(2,"Flampkip", especeFlamkip,null,1500.0))
-    //monstre1.renommer()
-    //MK1.utiliser(monstre1)
-    //monstre1.afficheDetail()
-
-    /*TEST MONSTER KUBE
-    println(MK1.utiliser(monstre1))*/
 
 
 
@@ -118,4 +121,12 @@ fun main() {
     partie.jouer()
 
 
+    // AUTRE :
+    //monstre1.attaquer(IndividuMonstre(2,"Flampkip", especeFlamkip,null,1500.0))
+    //monstre1.renommer()
+    //MK1.utiliser(monstre1)
+    //monstre1.afficheDetail()
+
+    /*TEST MONSTER KUBE
+    println(MK1.utiliser(monstre1))*/
 }

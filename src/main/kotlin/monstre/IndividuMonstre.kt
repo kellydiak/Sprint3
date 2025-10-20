@@ -33,7 +33,7 @@ import kotlin.math.round
  * Ne peuvent pas être inférieurs à 0 ni supérieurs à pvMax
  */
 
-class IndividuMonstre constructor(
+class IndividuMonstre (
     var id: Int,
     var nom: String,
     var espece: EspeceMonstre,
