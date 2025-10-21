@@ -15,8 +15,6 @@
 
 > Cette partie consiste à créer toute la base du jeu, son noyau. Nous y retrouvons toutes les fonctions basiques pour faire tourner le jeu.
 
-[ mettre du contenu ]: #
-
 ### Configuration : 
 
 - Nous ajoutons le proxy (ou pas) dans le fichier `gradle.properties`.
@@ -75,6 +73,40 @@ A la fin ce sprint, nous pouvons :
 
 [ mettre du contenu ]: #
 
+### Configuration :
+
+- Si pas encore fait, nous installons mariaDB.
+- Nous créons la base de données dans intellij et nous la connectons en renseignant les informations.
+- Puis, nous n'oublions pas de créer un fichier `tables.sql` dans le dossier `../../main/resources`.
+- Il est important d'écrire tout ce que nous faisons dans `tables.sql`car la console n'est disponible qu'en local (_tout s'efface en la fermant_).
+
+- ### Etape 2
+    - Nous créons les tables en nous basant sur les classes existantes.
+    - Seules : `Entraineur`, `EspeceMonstre`, `IndividuMonstre`, `Zone` & `Zone_EspeceMonstre` sont créés.
+    - Pour mieux visualiser le projet, on télécharge et modifie le fichier `TODO ERD.puml` afin de faire correspondre les tables.
+
+- ### Etape 3
+  - On insère 3 entraineurs dans la table `Entraineur`.
+  - On insère les espèces de monstre dans la table `EspeceMonstre`.
+  - On insère les individus de monstre dans la table `IndividuMonstre` en faisant attention à quel entraineur sont ils reliés.
+
+- ### Etape 4 
+  - Pour rendre nos manipulations fluides, nous importons `Java DataBase Connector` et le plaçons les informations dans le fichier `build.gradle.kts`.
+  - Cela va nous permettre d'envoyer des <ins>requêtes SQL</ins>, <ins>récupérer les résultats</ins> et <ins>gérer les transactions</ins>.
+  - Nous créons un package JDBC dans lequel nous placons notre classe BDD.
+  - La classe `BDD` gère les connexions et l'exécution des requêtes, on n'oublie pas de configurer les informations de connexion.
+
+- ### Etape 5
+  - Nous réalisons un test unitaire avec `JUnit5`. Pour vérifier si notre base de donées peut communiquer avec <ins>Kotlin</ins>.
+  - La table `Entraineur` sert d'exemple pour ce test.
+  
+- ### Etape 6
+  - On crée un `Composant d'accès aux données` pour centraliser les interactions avec la base.
+  - Dans notre projet les tables : `Entraineur`, `EspeceMonstre`, `IndividuMonstre` possèdent un DAO.
+  - On y renseigne dedans les opérations CRUD[^1]
+[^1]: create, read, update, delete
+
+
 A la fin ce sprint, nous pouvons :
 
 - [x] Intégrer d’une BDD via JDBC.
@@ -84,7 +116,7 @@ A la fin ce sprint, nous pouvons :
 
 ## III/ <ins>Résultats et tests :
 
-<center>Sprint 1</center>
+<p style="text-align:center">SPRINT 1</p>
 
 ![image](images/couleurTest1.png)
 
@@ -109,8 +141,11 @@ A la fin ce sprint, nous pouvons :
 ![image](images/monsterKubeTest2.png)
 
 
-<center>Sprint 3</center>
+<p style="text-align:center">SPRINT 3</p>
 
+![image](images/diagramme2classe.png)
+
+![image](images/BDDtest.png)
 
 
 ---
