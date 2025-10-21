@@ -26,7 +26,7 @@
 L'intérieur du zip contient les **ASCII-Art** des monstres.
 
 
-- En retournant dans `../main/kotlin`, nous créons tous les packages en thèmes communs.
+- En retournant dans `../main/kotlin`, nous créons tous les packages afin de regrouper des classes communes.
 
 ### Créations des classes :
 
