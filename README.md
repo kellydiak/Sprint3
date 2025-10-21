@@ -4,8 +4,25 @@
 
 > Le jeu `Kotlin Monsters` est inspiré de Pokemon. Nous incarnons un dresseur polyvalent et plein de vie !
 > Le projet est réparti en (2/3 sprints) pour nous apprendre à travailler de façon ordonnée et autonome. Le but : mobiliser toutes nos connaissances vues jusqu'à présent.
->
-> lol
+
+> `Objectifs` : 
+> - poo
+> - Travailler en mode projet
+> - Mise en place de bonnes pratiques (_documentation, commentaires_ ..)
+> - Résolution de problèmes et bugs
+> - Réalisation de tests
+> - Utilisation des DAO
+
+> `Technologies` : 
+> - Kotlin ..
+> - Gradle
+> - MariaDB
+> - JUnit5
+> - Java DataBase Connector
+> - IntelliJ
+> - Git
+> - GitHub
+> - UML
 
 ---
 
@@ -19,10 +36,8 @@
 
 - Nous ajoutons le proxy (ou pas) dans le fichier `gradle.properties`.
 
-
 - Nous importons les ressources utiles en téléchargeant le fichier zip. Puis, nous le décompressons dans le dossier `../main/resources`. 
 L'intérieur du zip contient les **ASCII-Art** des monstres.
-
 
 - En retournant dans `../main/kotlin`, nous créons tous les packages afin de regrouper des classes communes.
 
@@ -31,7 +46,7 @@ L'intérieur du zip contient les **ASCII-Art** des monstres.
 - ### Entraineur
   - Il représente un dresseur dans le jeu, c'est notre point d'entrée qui nous permettra de réaliser
   les différentes actions.
-  - Il possède des attributs propres à lui et une méthode `afficheDetail()`, qui permet d'afficher les informations
+  - Il possède des attributs propres à lui et une méthode `.afficheDetail()`, qui permet d'afficher les informations
   du dresseur.
 
 - ### EspeceMonstre
@@ -105,7 +120,16 @@ A la fin ce sprint, nous pouvons :
   - Dans notre projet les tables : `Entraineur`, `EspeceMonstre`, `IndividuMonstre` possèdent un DAO.
   - On y renseigne dedans les opérations CRUD[^1]
 [^1]: create, read, update, delete
+  
+- ### Etape 7
+  - On établit une connexion à la base de données.
+  - On teste si notre joueur se créer automatiquement grâce à la méthode `.save()`.
 
+- ### Etape 8
+  - Création des DAO pour `EspeceMonstre` & `IndividuMonstre`.
+
+- ### Etape 9 
+  - Création de l'EspeceMonstre `IceeFreezy`.
 
 A la fin ce sprint, nous pouvons :
 
@@ -140,16 +164,18 @@ A la fin ce sprint, nous pouvons :
 
 ![image](images/monsterKubeTest2.png)
 
-
 <p style="text-align:center">SPRINT 3</p>
 
 ![image](images/diagramme2classe.png)
 
 ![image](images/BDDtest.png)
 
+![image](images/listeEntraineur.png)
+
+![image](images/savefunction.png)
 
 ---
 
 ## IV/ <ins>Bilan et conclusion :
 
-> Le projet étant guidé pour favoriser la compréhension et l'apprentissage
+> Le projet étant guidé pour favoriser la compréhension et l'apprentissage ..
