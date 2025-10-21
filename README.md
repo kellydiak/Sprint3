@@ -36,8 +36,29 @@ L'intérieur du zip contient les **ASCII-Art** des monstres.
   - Il possède des attributs propres à lui et une méthode `afficheDetail()`, qui permet d'afficher les informations
   du dresseur.
 
-- ### 
+- ### EspeceMonstre
+  - xyz
 
+- ### IndividuMonstre
+  - xyz
+
+- ### Item
+  - xyz
+
+- ### Badge
+    - xyz
+
+- ### Utilisable
+  - lol
+  
+- ### MonsterKube
+  - xyz
+
+- ### CombatMonstre
+  - xyz
+
+- ### Partie
+    - xyz
 
 A la fin ce sprint, nous pouvons : 
 
@@ -63,11 +84,32 @@ A la fin ce sprint, nous pouvons :
 
 ## III/ <ins>Résultats et tests :
 
+<center>Sprint 1</center>
+
 ![image](images/couleurTest1.png)
 
 ![image](images/couleurTest2.png)
 
 ![image](images/entraineurTest.png)
+
+![image](images/especeMonstreTest.png)
+
+![image](images/individuMonstreTest1.png)
+
+![image](images/individuMonstreTest2.png)
+
+![image](images/individuMonstreTest3.png)
+
+![image](images/individuMonstreTest4.png)
+
+![image](images/badgeTest.png)
+
+![image](images/monsterKubeTest1.png)
+
+![image](images/monsterKubeTest2.png)
+
+
+<center>Sprint 3</center>
 
 
 
