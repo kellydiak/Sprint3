@@ -46,33 +46,44 @@ L'intérieur du zip contient les **ASCII-Art** des monstres.
 - ### Entraineur
   - Il représente un dresseur dans le jeu, c'est notre point d'entrée qui nous permettra de réaliser
   les différentes actions.
-  - Il possède des attributs propres à lui et une méthode `.afficheDetail()`, qui permet d'afficher les informations
-  du dresseur.
+  - Il possède des attributs propres à lui et une méthode.
 
 - ### EspeceMonstre
   - Cette classe représente un type de monstre avec les statistiques de base.
-  - Il possède des attributs e
+  - Il possède des attributs et une méthode.
+
+- ### Zone
+  - Cette classe représente un endroit dans le jeu. On va pouvoir créer des objets comme : une route, caverne ..
+  - Elle possède des attributs et deux méthodes.  
 
 - ### IndividuMonstre
-  - Cette classe représente une instance unique d'un monstre 
+  - Cette classe représente une instance unique d'un monstre appartenant à un joueur ou rencontré dans la nature.
+  - Elle possède des attributs, on y retrouve les notions de get/set et il y a 5 méthodes.
 
 - ### Item
-  - xyz
+  - Cette classe représente un objet physique dans le jeu appartenant en joueur.
+  - Pour éviter la répétition, 
 
 - ### Badge
-    - xyz
+    - Cette classe représente une récompense donnée au joueur à la fin d'un match.
+    - Elle héritre des éléments de la classe `Item` et possède un attribut propre.
+    - Dans notre configuration `Badge` est un sous type d'`Item`.
 
 - ### Utilisable
-  - lol
+  - Est une interface qui permet de séparer les Items en **deux groupes**. Ceux que l'on peut utiliser lors d'un combat ou non.
+  - Elle possède une méthode.
   
 - ### MonsterKube
-  - xyz
+  - Cette classe permet de capturer et de stocker des monstres sauvages.
+  - 
+  - Comme pour Badge, <ins>MonsterKube</ins> est un sous type d'`Item`.
 
 - ### CombatMonstre
-  - xyz
+  - Cette classe représente un combat entre .. et ..
+  - Elle possède des attributs et X méthodes
 
 - ### Partie
-    - xyz
+    - Cette classe permet ..
 
 A la fin ce sprint, nous pouvons : 
 
