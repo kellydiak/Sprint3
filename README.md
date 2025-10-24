@@ -2,11 +2,12 @@
 
 ## <ins>I/ Introduction
 
-> Le jeu `Kotlin Monsters` est inspiré de Pokemon. Nous incarnons un dresseur polyvalent et plein de vie !
-> Le projet est réparti en (2/3 sprints) pour nous apprendre à travailler de façon ordonnée et autonome. Le but : mobiliser toutes nos connaissances vues jusqu'à présent.
+> Le jeu `Kotlin Monsters` est inspiré de Pokémon. Nous incarnons un dresseur polyvalent et plein de vie !
+> 
+> Le projet est réparti en (2/3 sprints) pour nous apprendre à travailler de façon ordonnée et autonome.
 
 > `Objectifs` : 
-> - poo
+> - Approfondir les acquis sur la Programmation Orientée Objet
 > - Travailler en mode projet
 > - Mise en place de bonnes pratiques (_documentation, commentaires_ ..)
 > - Résolution de problèmes et bugs
@@ -14,15 +15,14 @@
 > - Utilisation des DAO
 
 > `Technologies` : 
-> - Kotlin ..
+> - Kotlin
 > - Gradle
 > - MariaDB
 > - JUnit5
 > - Java DataBase Connector
 > - IntelliJ
-> - Git
 > - GitHub
-> - UML
+> - P-UML
 
 ---
 
@@ -50,10 +50,11 @@ L'intérieur du zip contient les **ASCII-Art** des monstres.
   du dresseur.
 
 - ### EspeceMonstre
-  - xyz
+  - Cette classe représente un type de monstre avec les statistiques de base.
+  - Il possède des attributs e
 
 - ### IndividuMonstre
-  - xyz
+  - Cette classe représente une instance unique d'un monstre 
 
 - ### Item
   - xyz
