@@ -44,13 +44,13 @@ L'intérieur du zip contient les **ASCII-Art** des monstres.
 ### Créations des classes :
 
 - ### Entraineur
-  - Il représente un dresseur dans le jeu, c'est notre point d'entrée qui nous permettra de réaliser
+  - Cette classe représente un dresseur dans le jeu, c'est notre point d'entrée qui nous permettra de réaliser
   les différentes actions.
-  - Il possède des attributs propres à lui et une méthode.
+  - Elle possède des attributs propres à lui et une méthode.
 
 - ### EspeceMonstre
   - Cette classe représente un type de monstre avec les statistiques de base.
-  - Il possède des attributs et une méthode.
+  - Elle possède des attributs et une méthode.
 
 - ### Zone
   - Cette classe représente un endroit dans le jeu. On va pouvoir créer des objets comme : une route, caverne ..
@@ -61,13 +61,14 @@ L'intérieur du zip contient les **ASCII-Art** des monstres.
   - Elle possède des attributs, on y retrouve les notions de get/set et il y a 5 méthodes.
 
 - ### Item
-  - Cette classe représente un objet physique dans le jeu appartenant en joueur.
-  - Pour éviter la répétition, 
+  - Cette classe représente un objet physique dans le jeu appartenant au joueur.
+  - Dans le principe d'héritage `Item` est la classe mère de : `MonsterKube` & `Badge`.
+  - Elle va pouvoir transmettre ses attributs aux classes qui la mentionneront.
 
 - ### Badge
-    - Cette classe représente une récompense donnée au joueur à la fin d'un match.
-    - Elle héritre des éléments de la classe `Item` et possède un attribut propre.
-    - Dans notre configuration `Badge` est un sous type d'`Item`.
+  - Cette classe représente une récompense donnée au joueur à la fin d'un match.
+  - Elle héritre des éléments de la classe `Item` et possède un attribut propre.
+  - Dans notre configuration `Badge` est un sous type d'`Item`.
 
 - ### Utilisable
   - Est une interface qui permet de séparer les Items en **deux groupes**. Ceux que l'on peut utiliser lors d'un combat ou non.
@@ -75,19 +76,21 @@ L'intérieur du zip contient les **ASCII-Art** des monstres.
   
 - ### MonsterKube
   - Cette classe permet de capturer et de stocker des monstres sauvages.
-  - 
+  - Elle héritre des éléments de la classe `Item` et possède un attribut propre.
   - Comme pour Badge, <ins>MonsterKube</ins> est un sous type d'`Item`.
+  - De plus elle implémente l'interface `Utilisable`.
 
 - ### CombatMonstre
-  - Cette classe représente un combat entre .. et ..
-  - Elle possède des attributs et X méthodes
+  - Cette classe représente un combat entre un **individu monstre du joueur** et **un autre individu monstre**.
+  - Elle possède des attributs et 7 méthodes.
 
 - ### Partie
-    - Cette classe permet ..
+  - Cette classe représente une session de jeu.
+  - Elle possède des attributs et 4 méthodes.
 
-A la fin ce sprint, nous pouvons : 
+A la fin ce sprint, nous pouvons nous : 
 
-- [x] Se déplacer dans différentes zones.
+- [x] Déplacer dans différentes zones.
 - [x] Rencontrer des monstres sauvages.
 - [x] Combattre ou capturer des monstres sauvages.
 - [x] Consulter et organiser son équipe de monstres.
@@ -95,10 +98,7 @@ A la fin ce sprint, nous pouvons :
 
 ### <mark>Sprint 3 :
 
-> Cette partie consiste à créer 
-
-
-[ mettre du contenu ]: #
+> Dans cette partie nous mettons en place la base de données, la configurons ..  
 
 ### Configuration :
 
