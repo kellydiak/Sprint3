@@ -119,16 +119,16 @@ A la fin ce sprint, nous pouvons nous :
 - ### Etape 3
   - On insère 3 entraineurs dans la table `Entraineur`.
   - On insère les espèces de monstre dans la table `EspeceMonstre`.
-  - On insère les individus de monstre dans la table `IndividuMonstre` en faisant attention à quel entraineur sont ils reliés.
+  - On insère les individus de monstre dans la table `IndividuMonstre` en faisant attention à quel entraineur ils sont reliés.
 
 - ### Etape 4 
   - Pour rendre nos manipulations fluides, nous importons `Java DataBase Connector` et le plaçons les informations dans le fichier `build.gradle.kts`.
   - Cela va nous permettre d'envoyer des <ins>requêtes SQL</ins>, <ins>récupérer les résultats</ins> et <ins>gérer les transactions</ins>.
-  - Nous créons un package JDBC dans lequel nous placons notre classe BDD.
+  - Nous créons un package JDBC dans lequel nous plaçons notre classe BDD.
   - La classe `BDD` gère les connexions et l'exécution des requêtes, on n'oublie pas de configurer les informations de connexion.
 
 - ### Etape 5
-  - Nous réalisons un test unitaire avec `JUnit5`. Pour vérifier si notre base de donées peut communiquer avec <ins>Kotlin</ins>.
+  - Nous réalisons un test unitaire avec `JUnit5`. Pour vérifier si notre base de données peut communiquer avec <ins>Kotlin</ins>.
   - La table `Entraineur` sert d'exemple pour ce test.
   
 - ### Etape 6
@@ -139,7 +139,7 @@ A la fin ce sprint, nous pouvons nous :
   
 - ### Etape 7
   - On établit une connexion à la base de données.
-  - On teste si notre joueur se créer automatiquement grâce à la méthode `.save()`.
+  - On teste si notre joueur se crée automatiquement grâce à la méthode `.save()`.
 
 - ### Etape 8
   - Création des DAO pour `EspeceMonstre` & `IndividuMonstre`.
@@ -194,8 +194,6 @@ A la fin ce sprint, nous pouvons :
 
 ## IV/ <ins>Bilan et conclusion :
 
-> Ce projet conséquent m'a permis d'appliquer toutes les notions vues et de mieux comprendre les concepts étudiés recémment. J'ai appris à exploiter des fontionnalités d'intelliJ que je ne connaissais pas jusqu'à présent.
+> Ce projet conséquent m'a permis d'appliquer toutes les notions vues et de mieux comprendre les concepts étudiés récemment. J'ai appris à exploiter des fonctionnalités d'intelliJ que je ne connaissais pas jusqu'à présent.
 >
-> L'expérience était enrichissante
->
-> 
+> Je trouve que travailler sur un tel projet est enrichissant et nous permet de nous demander quelles sont les exigences qu'on attendrait de moi si c'était à produire pour un client.
