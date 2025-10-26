@@ -98,7 +98,11 @@ A la fin ce sprint, nous pouvons nous :
 
 ### <mark>Sprint 3 :
 
-> Dans cette partie nous mettons en place la base de données, la configurons ..  
+> Dans cette partie nous mettons en place une connexion entre notre projet et une base de données relationnelle mariaDB.
+> 
+> On effectue cette procédure pour éviter de créer les éléments directement dans le code.
+>
+> On souhaite centraliser et stocker nos données pour les manipuler facilement.
 
 ### Configuration :
 
@@ -190,4 +194,8 @@ A la fin ce sprint, nous pouvons :
 
 ## IV/ <ins>Bilan et conclusion :
 
-> Le projet étant guidé pour favoriser la compréhension et l'apprentissage ..
+> Ce projet conséquent m'a permis d'appliquer toutes les notions vues et de mieux comprendre les concepts étudiés recémment. J'ai appris à exploiter des fontionnalités d'intelliJ que je ne connaissais pas jusqu'à présent.
+>
+> L'expérience était enrichissante
+>
+> 
